@@ -203,7 +203,7 @@ hr {
 <body>
 <h3>Reproducible Research Peer Assessment Project 1</h3>
 
-<p>Catherine Li Jan 2015</p>
+<p>Catherine Li Feb 2015</p>
 
 <h4>Project Summary</h4>
 
@@ -362,7 +362,12 @@ summary(histnewData$steps)
 <h6>1. Create a new factor variable in the dataset with two levels &ndash; &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</h6>
 
 <pre><code class="r">library(timeDate)
-newData$weekday&lt;-weekdays(as.Date(newData$date))
+</code></pre>
+
+<pre><code>## Warning: package &#39;timeDate&#39; was built under R version 3.1.2
+</code></pre>
+
+<pre><code class="r">newData$weekday&lt;-weekdays(as.Date(newData$date))
 newData$weekday2&lt;-isWeekday((as.Date(newData$date)), wday = 1:5)
 newData$weekdayDummy&lt;-factor(newData$weekday2,levels = c(&quot;TRUE&quot;,&quot;FALSE&quot;),labels = c(&quot;weekday&quot;, &quot;weekends&quot;))
 newData2&lt;-newData[,c(1,2,3,6)]

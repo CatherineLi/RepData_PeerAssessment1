@@ -1,5 +1,5 @@
 ### Reproducible Research Peer Assessment Project 1
-Catherine Li Jan 2015
+Catherine Li Feb 2015
 
 #### Project Summary
 

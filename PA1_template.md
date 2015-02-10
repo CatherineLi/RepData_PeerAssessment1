@@ -1,5 +1,5 @@
 ### Reproducible Research Peer Assessment Project 1
-Catherine Li Jan 2015
+Catherine Li Feb 2015
 
 #### Project Summary
 
@@ -180,6 +180,13 @@ For this part the weekdays() function may be of some help here. Use the dataset 
 
 ```r
 library(timeDate)
+```
+
+```
+## Warning: package 'timeDate' was built under R version 3.1.2
+```
+
+```r
 newData$weekday<-weekdays(as.Date(newData$date))
 newData$weekday2<-isWeekday((as.Date(newData$date)), wday = 1:5)
 newData$weekdayDummy<-factor(newData$weekday2,levels = c("TRUE","FALSE"),labels = c("weekday", "weekends"))
